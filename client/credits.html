@@ -1,0 +1,14 @@
+<!-- usage:
+{{#showIfSufficientCredits credits=50}}
+  This will only show if user has at least 50 credits
+{{/showIfSufficientCredits}}
+-->
+<template name="showIfSufficientCredits">
+  {{#if Template.subscriptionsReady}}
+    {{#if show}}
+      {{> UI.contentBlock}}
+    {{else}}
+      {{> UI.elseBlock}}
+    {{/if}}
+  {{/if}}
+</template>
